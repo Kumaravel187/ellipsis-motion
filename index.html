@@ -6,13 +6,119 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Ellipsis Motion</title>
   </head>
   <body>
+    <div class="main-display">
+      <nav class="navigation">
+        <section class="navigation__section-left">
+          <img
+            src="./images/test.png"
+            class="navigation__section-left--image"
+            alt="camera-icon"
+          />
+          <span class="navigation__section-left--span">ellipsis motion</span>
+        </section>
+        <section class="nav-links">
+          <ul role="list" class="nav-links__menu mobile">
+            <li class="nav-links__menu--item"></li>
+            <li class="nav-links__menu--item"></li>
+            <li class="nav-links__menu--item"></li>
+          </ul>
+          <div class="nav-links__menu desktop">
+            <a class="nav-links__menu--page" href="#">Home</a>
+            <a class="nav-links__menu--page" href="#">Services</a>
+            <a class="nav-links__menu--page" href="#">Contact</a>
+          </div>
+        </section>
+      </nav>
+
+      <section class="section-one">
+        <div class="section-one__overlay"></div>
+        <video
+          class="section-one__video"
+          src="./video/car.mp4"
+          muted
+          autoplay
+          loop
+        ></video>
+
+        <h1 class="section-one__heading">
+          empowering <span class="span">you</span>
+        </h1>
+      </section>
+
+      <section class="section-two">
+        <h2 class="section-two__heading">clients</h2>
+        <section class="section-two__client">
+          <article class="section-two__client--meta">
+            <img class="icon" src="./images/meta.png" alt="meto" />
+            <button class="btn">view more</button>
+          </article>
+          <article class="section-two__client--adidas">
+            <img class="icon" src="./images/adidas.png" alt="adidas" />
+            <button class="btn">view more</button>
+          </article>
+        </section>
+      </section>
+
+      <section class="section-three">
+        <h2 class="section-three__heading">gallery</h2>
+        <img
+          src="./images/dslr.jpg"
+          alt=""
+          class="section-three__photography"
+        />
+        <img
+          src="./images/mbs-night.jpg"
+          alt=""
+          class="section-three__photography"
+        />
+        <img
+          src="./images/tree.jpg"
+          alt=""
+          class="section-three__photography"
+        />
+        <img
+          src="./images/garden.jpg"
+          alt=""
+          class="section-three__photography"
+        />
+        <img
+          src="./images/ball.jpg"
+          alt=""
+          class="section-three__photography"
+        />
+      </section>
+
+      <footer class="footer">
+        <section class="footer__description">
+          <p class="footer__description--para">
+            Using visual storytelling to create captivating visual content that
+            captures the essence of you and your brand
+          </p>
+        </section>
+        <section class="footer__socials">
+          <section class="footer__socials--icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </section>
+        </section>
+      </footer>
+    </div>
+
     <script src="./app/app.js"></script>
   </body>
 </html>
