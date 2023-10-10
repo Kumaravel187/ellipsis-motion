@@ -15,7 +15,6 @@
 
     &--meta,
     &--adidas {
-      background-color: $jet-black;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -23,29 +22,22 @@
       width: 15rem;
       height: 15rem;
       border-radius: 2rem;
-      padding-bottom: 2rem;
+      border: 1px solid $jet-black;
 
       img.icon {
         width: 8rem;
       }
       .link {
         text-decoration: none;
-        color: $white;
+        color: $jet-black;
         text-transform: capitalize;
-        border: 1px solid $white;
+        border: 1px solid $jet-black;
         padding: 0.5rem 1rem;
         cursor: pointer;
         border-radius: 2rem;
         overflow: hidden;
         font-size: $fs-md;
         transition: all 0.4s ease-in-out;
-
-        &:hover {
-          background-color: darken($color: $yellow, $amount: 020%);
-          font-weight: 500;
-          border: none;
-          color: $jet-black;
-        }
       }
     }
   }

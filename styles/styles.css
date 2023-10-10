@@ -29,6 +29,7 @@ ol[role=list] {
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
+  font-size: 100%;
 }
 
 /* Set core body defaults */
@@ -81,6 +82,11 @@ select {
   grid-template-rows: auto 1fr auto;
 }
 
+@media (min-width: 50rem) {
+  html {
+    font-size: 150%;
+  }
+}
 .navigation {
   display: flex;
   justify-content: space-around;
@@ -198,7 +204,6 @@ select {
   grid-template-columns: 1fr;
 }
 .section-two__client--meta, .section-two__client--adidas {
-  background-color: hsl(330, 100%, 0%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,28 +211,22 @@ select {
   width: 15rem;
   height: 15rem;
   border-radius: 2rem;
-  padding-bottom: 2rem;
+  border: 1px solid hsl(330, 100%, 0%);
 }
 .section-two__client--meta img.icon, .section-two__client--adidas img.icon {
   width: 8rem;
 }
 .section-two__client--meta .link, .section-two__client--adidas .link {
   text-decoration: none;
-  color: hsl(197, 33%, 96%);
+  color: hsl(330, 100%, 0%);
   text-transform: capitalize;
-  border: 1px solid hsl(197, 33%, 96%);
+  border: 1px solid hsl(330, 100%, 0%);
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 2rem;
   overflow: hidden;
   font-size: 0.8125rem;
   transition: all 0.4s ease-in-out;
-}
-.section-two__client--meta .link:hover, .section-two__client--adidas .link:hover {
-  background-color: #ebbb00;
-  font-weight: 500;
-  border: none;
-  color: hsl(330, 100%, 0%);
 }
 
 @media (min-width: 50rem) {
