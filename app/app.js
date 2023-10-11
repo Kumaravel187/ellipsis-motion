@@ -4,9 +4,9 @@ const mobileNavMenuEl = document.querySelector(".navigation-menu");
 mobileBtnEl.addEventListener("click", () => {
   if (mobileBtnEl.classList.contains("open")) {
     mobileBtnEl.classList.remove("open");
-    mobileNavMenuEl.style.visibility = "hidden";
+    mobileNavMenuEl.style.display = "none";
   } else {
     mobileBtnEl.classList.add("open");
-    mobileNavMenuEl.style.visibility = "visible";
+    mobileNavMenuEl.style.display = "block";
   }
 });

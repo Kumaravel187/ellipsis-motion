@@ -69,10 +69,7 @@
 }
 
 .navigation-menu {
-  display: flex;
-  flex-direction: column;
-  // justify-content: center;
-  align-items: center;
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -86,9 +83,9 @@
   height: 100%;
   text-align: center;
   // padding-top: 1rem;
-  visibility: hidden;
 
   a {
+    display: block;
     text-decoration: none;
     color: $jet-black;
     text-transform: capitalize;

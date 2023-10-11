@@ -119,9 +119,7 @@ select {
 }
 
 .navigation-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -134,9 +132,9 @@ select {
   width: 100vw;
   height: 100%;
   text-align: center;
-  visibility: hidden;
 }
 .navigation-menu a {
+  display: block;
   text-decoration: none;
   color: hsl(330, 100%, 0%);
   text-transform: capitalize;
