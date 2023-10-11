@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 2rem 0.5rem 0 0.5rem;
+  background-color: $white;
   &__description {
     display: flex;
     flex-direction: column;
@@ -19,7 +20,7 @@
 
     &--moto {
       font-size: $fs-xs;
-      color: $light-grey;
+      color: $dark-grey;
     }
 
     &--description {
@@ -28,7 +29,7 @@
     }
 
     &--support {
-      color: $grey;
+      color: $dark-grey;
       display: flex;
       align-items: center;
 
@@ -50,7 +51,7 @@
 
   &__image {
     &--img {
-      margin: 2rem auto;
+      margin: 0rem auto;
       width: 15rem;
       clip-path: circle();
       filter: grayscale(1);

@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: $grey;
+
   // border: 1px solid red;
 
   &__section-left {
@@ -126,7 +128,8 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         &:hover {
-          background-color: darken($color: $yellow, $amount: 020%);
+          background-color: $jet-black;
+          color: $white;
           padding: 0.35rem 0.85rem;
           border-radius: 2rem;
           font-weight: 500;

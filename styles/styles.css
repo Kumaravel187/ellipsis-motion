@@ -38,6 +38,7 @@ body {
   line-height: 1.5;
   font-family: "AR One Sans", sans-serif;
   font-weight: 400;
+  background-color: #f2f2f2;
 }
 
 /* A elements that don't have a class get default styles */
@@ -72,6 +73,7 @@ select {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #dee2e6;
 }
 .navigation__section-left {
   display: flex;
@@ -172,7 +174,8 @@ select {
     transition: all 0.3s ease-in-out;
   }
   .navigation__section-right__link:hover {
-    background-color: #ebbb00;
+    background-color: hsl(330, 100%, 0%);
+    color: #f3f4f6;
     padding: 0.35rem 0.85rem;
     border-radius: 2rem;
     font-weight: 500;
@@ -185,6 +188,7 @@ select {
   display: flex;
   flex-direction: column;
   padding: 2rem 0.5rem 0 0.5rem;
+  background-color: #f3f4f6;
 }
 .section__description {
   display: flex;
@@ -201,7 +205,7 @@ select {
 }
 .section__description--moto {
   font-size: 0.5345rem;
-  color: #949494;
+  color: #808080;
 }
 .section__description--description {
   font-size: 0.8125rem;
@@ -225,7 +229,7 @@ select {
   font-weight: 600;
 }
 .section__image--img {
-  margin: 2rem auto;
+  margin: 0rem auto;
   width: 15rem;
   -webkit-clip-path: circle();
           clip-path: circle();
@@ -254,7 +258,7 @@ select {
 }
 .section-one__video {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .section-one__overlay {
   position: absolute;
@@ -271,7 +275,7 @@ select {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
   color: #f3f4f6;
   font-weight: 700;
@@ -288,63 +292,63 @@ select {
   }
 }
 .section-two {
+  padding: 1.5rem 0;
   text-align: center;
-}
-.section-two__heading {
-  font-weight: 500;
-  text-transform: capitalize;
-  margin-bottom: 1rem;
+  background-color: #f3f4f6;
 }
 .section-two__client {
   display: grid;
-  gap: 1rem 0rem;
+  grid-template-columns: 1fr;
   place-items: center;
-  grid-template-columns: 1fr 1fr;
-}
-.section-two__client--facebook {
-  grid-column: span 2;
+  gap: 1rem;
 }
 .section-two__client--meta, .section-two__client--adidas, .section-two__client--facebook {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  width: 10rem;
-  height: 12rem;
-  padding: 0 1.5rem;
-  background-color: #fff;
+  justify-content: space-evenly;
+  width: 15rem;
+  height: 10rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.section-two__client--meta:hover, .section-two__client--adidas:hover, .section-two__client--facebook:hover {
+  transform: scale(1.05);
   box-shadow: 0px 10px 16px 7px rgba(0, 0, 0, 0.1);
-  border: transparent;
-  border-radius: 1rem;
 }
 .section-two__client--meta p, .section-two__client--adidas p, .section-two__client--facebook p {
-  font-size: 0.8125rem;
+  font-size: 0.4275rem;
   font-style: italic;
-  margin-bottom: 0.5rem;
 }
 .section-two__client--meta img.icon, .section-two__client--adidas img.icon, .section-two__client--facebook img.icon {
-  width: 4rem;
+  width: 3rem;
 }
 .section-two__client--meta .link, .section-two__client--adidas .link, .section-two__client--facebook .link {
   text-decoration: none;
   color: hsl(330, 100%, 0%);
   text-transform: capitalize;
   border: 1px solid hsl(330, 100%, 0%);
-  padding: 0.25rem 0.75rem;
-  cursor: pointer;
+  padding: 0.25rem 0.5rem;
   border-radius: 2rem;
-  overflow: hidden;
-  font-size: 0.5345rem;
+  font-size: 0.4275rem;
   transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.section-two__client--meta .link:hover, .section-two__client--adidas .link:hover, .section-two__client--facebook .link:hover {
+  color: #f3f4f6;
+  border: transparent;
+  background-color: hsl(330, 100%, 0%);
+  font-weight: 600;
 }
 
 @media (min-width: 50rem) {
-  .section-two__client {
-    gap: 0rem;
-    grid-template-columns: 1fr 1fr 1fr;
+  .section-two {
+    padding: 1rem 4rem 2rem 4rem;
   }
-  .section-two__client--facebook {
-    grid-column: span 1;
+  .section-two__client {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1%;
   }
   .section-two__client--meta, .section-two__client--adidas, .section-two__client--facebook {
     width: 12rem;
@@ -352,39 +356,44 @@ select {
     padding: 1.5rem;
   }
   .section-two__client--meta img.icon, .section-two__client--adidas img.icon, .section-two__client--facebook img.icon {
-    width: 18rem;
+    width: 6rem;
   }
   .section-two__client p {
-    margin-bottom: 1.15rem;
+    font-size: 0.5345rem;
   }
   .section-two__client .link {
-    font-size: 0.8125rem;
+    font-size: 0.5345rem;
   }
 }
 .section-three {
   text-align: center;
   padding: 0 0.5rem;
+  background-color: #f3f4f6;
 }
 .section-three__heading {
   font-weight: 500;
   text-transform: capitalize;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 .section-three .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.25rem;
 }
 .section-three__photography {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: grayscale(50%);
 }
 .section-three__photography:nth-child(1) {
   grid-column: span 2;
 }
-.section-three__photography:nth-child(4) {
+.section-three__photography:nth-child(5) {
+  grid-column: span 2;
+}
+.section-three__photography:nth-child(9) {
   grid-column: span 2;
 }
 
@@ -401,7 +410,7 @@ select {
   flex: 3;
 }
 .footer__description--para {
-  font-size: 1rem;
+  font-size: 0.5345rem;
   font-style: italic;
   margin-right: 1rem;
   color: #f3f4f6;
