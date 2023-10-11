@@ -61,20 +61,6 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 .main-display {
   min-height: 100vh;
   min-height: 100dvh;
@@ -82,11 +68,6 @@ select {
   grid-template-rows: auto 1fr auto;
 }
 
-@media (min-width: 50rem) {
-  html {
-    font-size: 150%;
-  }
-}
 .navigation {
   display: flex;
   justify-content: space-around;
@@ -111,17 +92,65 @@ select {
 .navigation__section-right__list {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 .navigation__section-right__list--item {
   border: 1px solid hsl(330, 100%, 0%);
   margin-bottom: 0.3rem;
   width: 1.25rem;
+  transition: all 300ms ease-in-out;
 }
 .navigation__section-right__list--item:nth-child(3) {
   margin-bottom: 0rem;
 }
+.navigation__section-right__list.open > span:nth-child(1) {
+  transform-origin: 3px 3px;
+  transform: rotate(45deg);
+}
+.navigation__section-right__list.open > span:nth-child(2) {
+  opacity: 0;
+}
+.navigation__section-right__list.open > span:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: -1px -2px;
+}
 .navigation .desktop {
   display: none;
+}
+
+.navigation-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  background: hsla(0, 0%, 96%, 0.9);
+  margin-top: 2.8rem;
+  z-index: 99;
+  width: 100vw;
+  height: 100%;
+  text-align: center;
+  visibility: hidden;
+}
+.navigation-menu a {
+  text-decoration: none;
+  color: hsl(330, 100%, 0%);
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  width: 100vw;
+  transition: all 300ms ease-in-out;
+  letter-spacing: 0.05rem;
+  font-family: "Roboto", sans-serif;
+}
+.navigation-menu a:hover {
+  background-color: hsla(330, 100%, 0%, 0.4);
+  color: #f3f4f6;
+  font-weight: 900;
 }
 
 @media (min-width: 50rem) {
@@ -150,6 +179,9 @@ select {
     border-radius: 2rem;
     font-weight: 500;
   }
+  .navigation-menu {
+    display: none;
+  }
 }
 .section-one {
   position: relative;
@@ -175,7 +207,7 @@ select {
   transform: translate(-50%, -50%);
   font-size: 2.5rem;
   text-transform: uppercase;
-  color: hsl(197, 33%, 96%);
+  color: #f3f4f6;
   font-weight: 700;
   letter-spacing: 0.25rem;
   text-align: center;
@@ -199,33 +231,44 @@ select {
 }
 .section-two__client {
   display: grid;
-  gap: 2rem;
+  gap: 1rem 0rem;
   place-items: center;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
 }
-.section-two__client--meta, .section-two__client--adidas {
+.section-two__client--facebook {
+  grid-column: span 2;
+}
+.section-two__client--meta, .section-two__client--adidas, .section-two__client--facebook {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 2rem;
-  border: 1px solid hsl(330, 100%, 0%);
+  width: 10rem;
+  height: 12rem;
+  padding: 0 1.5rem;
+  background-color: #fff;
+  box-shadow: 0px 10px 16px 7px rgba(0, 0, 0, 0.1);
+  border: transparent;
+  border-radius: 1rem;
 }
-.section-two__client--meta img.icon, .section-two__client--adidas img.icon {
-  width: 8rem;
+.section-two__client--meta p, .section-two__client--adidas p, .section-two__client--facebook p {
+  font-size: 0.5345rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
 }
-.section-two__client--meta .link, .section-two__client--adidas .link {
+.section-two__client--meta img.icon, .section-two__client--adidas img.icon, .section-two__client--facebook img.icon {
+  width: 4rem;
+}
+.section-two__client--meta .link, .section-two__client--adidas .link, .section-two__client--facebook .link {
   text-decoration: none;
   color: hsl(330, 100%, 0%);
   text-transform: capitalize;
   border: 1px solid hsl(330, 100%, 0%);
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.75rem;
   cursor: pointer;
   border-radius: 2rem;
   overflow: hidden;
-  font-size: 0.8125rem;
+  font-size: 0.4275rem;
   transition: all 0.4s ease-in-out;
 }
 
@@ -234,8 +277,22 @@ select {
     gap: 0rem;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .section-two__client--meta .icon, .section-two__client--adidas .icon {
-    width: 15rem;
+  .section-two__client--facebook {
+    grid-column: span 1;
+  }
+  .section-two__client--meta, .section-two__client--adidas, .section-two__client--facebook {
+    width: 12rem;
+    height: 18rem;
+    padding: 1.5rem;
+  }
+  .section-two__client--meta img.icon, .section-two__client--adidas img.icon, .section-two__client--facebook img.icon {
+    width: 18rem;
+  }
+  .section-two__client p {
+    margin-bottom: 1.15rem;
+  }
+  .section-two__client .link {
+    font-size: 0.5345rem;
   }
 }
 .section-three {
@@ -281,7 +338,7 @@ select {
   font-size: 0.8125rem;
   font-style: italic;
   margin-right: 1rem;
-  color: hsl(197, 33%, 96%);
+  color: #f3f4f6;
 }
 .footer__description--para .span {
   font-weight: 700;
@@ -292,7 +349,7 @@ select {
 }
 
 i {
-  color: hsl(197, 33%, 96%);
+  color: #f3f4f6;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
