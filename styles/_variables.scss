@@ -7,22 +7,27 @@ $yellow-alp: hsla(48, 100%, 66%, 0.25);
 $jet-black-alp: hsla(330, 100%, 0%, 0.4);
 $white-alp: hsla(0, 0%, 96%, 0.25);
 $white-alp-one: hsla(0, 0%, 96%, 0.9);
+$light-grey: #949494;
+$grey: #808080;
 
 // Typography
 
-$ff-primary: "Roboto", sans-serif;
+$ff-primary: "AR One Sans", sans-serif;
 
-$fs-xsm: 0.4275rem;
-$fs-sm: 0.5345rem;
+$fs-xxs: 0.4275rem;
+$fs-xs: 0.5345rem;
 // $fs-sm: 0.6875rem;
-$fs-md: 0.8125rem;
+$fs-s: 0.8125rem;
+$fs-m: 1rem;
+
 $fs-l: 1.25rem;
-$fs-xl: 1.25rem;
+$fs-xl: 1.75rem;
 $fs-xxl: 2.5rem;
 $fs-xxxl: 5rem;
 
 $fw-400: 400;
 $fw-500: 500;
+$fw-600: 600;
 $fw-700: 700;
 
 // gap

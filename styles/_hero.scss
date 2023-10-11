@@ -33,7 +33,7 @@
       border-radius: 1rem;
 
       p {
-        font-size: $fs-sm;
+        font-size: $fs-s;
         font-style: italic;
         margin-bottom: 0.5rem;
       }
@@ -52,7 +52,7 @@
         cursor: pointer;
         border-radius: 2rem;
         overflow: hidden;
-        font-size: $fs-xsm;
+        font-size: $fs-xs;
         transition: all 0.4s ease-in-out;
       }
     }
@@ -81,7 +81,7 @@
         margin-bottom: 1.15rem;
       }
       .link {
-        font-size: $fs-sm;
+        font-size: $fs-s;
       }
     }
   }
